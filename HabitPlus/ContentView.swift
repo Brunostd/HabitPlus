@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  HabitPlus
-//
-//  Created by Bruno Brito on 29/03/22.
-//
-
 import SwiftUI
 
 struct ContentView: View {
