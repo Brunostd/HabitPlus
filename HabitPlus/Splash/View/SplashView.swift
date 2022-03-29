@@ -7,7 +7,7 @@ struct SplashView: View{
     var body: some View{
         switch state {
         case .loading:
-            Text("Loading...")
+            Text("Loading")
         case .goToSignInScreen:
             Text("Carregar tela de login")
         case .goToHomeScreen:
