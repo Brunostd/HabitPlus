@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C100A7FF27F7A1BA00059FE9 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C100A7FE27F7A1BA00059FE9 /* SplashViewModel.swift */; };
 		C1063D1127F388830067D000 /* HabitPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1063D1027F388830067D000 /* HabitPlusApp.swift */; };
 		C1063D1527F3889D0067D000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1063D1427F3889D0067D000 /* Assets.xcassets */; };
 		C1063D1827F3889D0067D000 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1063D1727F3889D0067D000 /* Preview Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C100A7FE27F7A1BA00059FE9 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		C1063D0D27F388830067D000 /* HabitPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1063D1027F388830067D000 /* HabitPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPlusApp.swift; sourceTree = "<group>"; };
 		C1063D1427F3889D0067D000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C100A7FD27F7A15900059FE9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C100A7FE27F7A1BA00059FE9 /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C1063D0427F388820067D000 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		C1063D1E27F389BB0067D000 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				C100A7FD27F7A15900059FE9 /* ViewModel */,
 				C1063D2027F38A240067D000 /* Model */,
 				C1063D1F27F38A020067D000 /* View */,
 			);
@@ -167,6 +178,7 @@
 				C1063D2427F38C010067D000 /* SplashUIState.swift in Sources */,
 				C1063D1127F388830067D000 /* HabitPlusApp.swift in Sources */,
 				C1063D2227F38AA60067D000 /* SplashView.swift in Sources */,
+				C100A7FF27F7A1BA00059FE9 /* SplashViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
