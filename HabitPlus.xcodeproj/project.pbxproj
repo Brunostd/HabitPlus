@@ -13,6 +13,9 @@
 		C1063D1827F3889D0067D000 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1063D1727F3889D0067D000 /* Preview Assets.xcassets */; };
 		C1063D2227F38AA60067D000 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1063D2127F38AA60067D000 /* SplashView.swift */; };
 		C1063D2427F38C010067D000 /* SplashUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1063D2327F38C010067D000 /* SplashUIState.swift */; };
+		C11A3CD027F916F5001E1833 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11A3CCF27F916F5001E1833 /* SignInView.swift */; };
+		C11A3CD227F9182E001E1833 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11A3CD127F9182E001E1833 /* SignInViewModel.swift */; };
+		C11A3CD427F919A5001E1833 /* SplashViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11A3CD327F919A5001E1833 /* SplashViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		C1063D1727F3889D0067D000 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C1063D2127F38AA60067D000 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		C1063D2327F38C010067D000 /* SplashUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUIState.swift; sourceTree = "<group>"; };
+		C11A3CCF27F916F5001E1833 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		C11A3CD127F9182E001E1833 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		C11A3CD327F919A5001E1833 /* SplashViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				C100A7FE27F7A1BA00059FE9 /* SplashViewModel.swift */,
+				C11A3CD327F919A5001E1833 /* SplashViewRouter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -63,6 +70,7 @@
 		C1063D0F27F388830067D000 /* HabitPlus */ = {
 			isa = PBXGroup;
 			children = (
+				C11A3CCB27F9167B001E1833 /* SignIn */,
 				C1063D1E27F389BB0067D000 /* Splash */,
 				C1063D1027F388830067D000 /* HabitPlusApp.swift */,
 				C1063D1427F3889D0067D000 /* Assets.xcassets */,
@@ -103,6 +111,39 @@
 				C1063D2327F38C010067D000 /* SplashUIState.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C11A3CCB27F9167B001E1833 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				C11A3CCE27F9169C001E1833 /* View */,
+				C11A3CCD27F91694001E1833 /* Model */,
+				C11A3CCC27F9168D001E1833 /* ViewModel */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		C11A3CCC27F9168D001E1833 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C11A3CD127F9182E001E1833 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C11A3CCD27F91694001E1833 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C11A3CCE27F9169C001E1833 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C11A3CCF27F916F5001E1833 /* SignInView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,8 +218,11 @@
 			files = (
 				C1063D2427F38C010067D000 /* SplashUIState.swift in Sources */,
 				C1063D1127F388830067D000 /* HabitPlusApp.swift in Sources */,
+				C11A3CD227F9182E001E1833 /* SignInViewModel.swift in Sources */,
 				C1063D2227F38AA60067D000 /* SplashView.swift in Sources */,
 				C100A7FF27F7A1BA00059FE9 /* SplashViewModel.swift in Sources */,
+				C11A3CD427F919A5001E1833 /* SplashViewRouter.swift in Sources */,
+				C11A3CD027F916F5001E1833 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
