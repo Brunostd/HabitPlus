@@ -13,43 +13,62 @@ struct SignInView: View{
     @State var navigationHidden = true
     
     var body: some View{
-        NavigationView{
-            ScrollView(showsIndicators: false){
-                VStack(alignment: .center, spacing: 20){
-                    
-                    Spacer(minLength: 36)
-                    
-                    VStack(alignment: .center, spacing: 8){
-                        Image("logo")
-                            .resizable()
-                            .scaledToFit()
-                            .padding(.horizontal, 48)
+        
+        ZStack{
+            if case SignInUIState.goToHomeScreen = viewModel.uiState{
+                viewModel.homeView()
+            } else{
+                NavigationView{
+                    ScrollView(showsIndicators: false){
+                        VStack(alignment: .center, spacing: 20){
+                            
+                            Spacer(minLength: 36)
+                            
+                            VStack(alignment: .center, spacing: 8){
+                                Image("logo")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .padding(.horizontal, 48)
+                                
+                                Text("Login")
+                                    .foregroundColor(.orange)
+                                    .font(Font.system(.title).bold())
+                                    .padding(.bottom, 8)
+                                
+                                emailField
+                                
+                                passwordField
+                                
+                                enterButton
+                                
+                                registerLink
+                                
+                                Text("Copyright @YYY")
+                                    .foregroundColor(Color.gray)
+                                    .font(Font.system(size: 16).bold())
+                                    .padding(.top, 16)
+                                
+                            }
+                        }
                         
-                        Text("Login")
-                            .foregroundColor(.orange)
-                            .font(Font.system(.title).bold())
-                            .padding(.bottom, 8)
+                        if case SignInUIState.error(let value) = viewModel.uiState{
+                            Text("")
+                                .alert(isPresented: .constant(true)){
+                                    Alert(title: Text("HabitPlus"),
+                                          message: Text(value),
+                                          dismissButton: .default(Text("Ok")){
+                                        //Aqui eu colocaria alguma açao do alert
+                                    })
+                                }
+                        }
                         
-                        emailField
-                        
-                        passwordField
-                        
-                        enterButton
-                        
-                        registerLink
-                        
-                        Text("Copyright @YYY")
-                            .foregroundColor(Color.gray)
-                            .font(Font.system(size: 16).bold())
-                            .padding(.top, 16)
-                        
-                    }
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .padding(.horizontal, 32)
+                        .background(Color.white)
+                        .navigationBarTitle("Login", displayMode: .inline)
+                        .navigationBarHidden(navigationHidden)
                 }
-            }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding(.horizontal, 32)
-                .background(Color.white)
-                .navigationBarTitle("Login", displayMode: .inline)
-                .navigationBarHidden(navigationHidden)
+            }
         }
     }
 }
@@ -71,7 +90,7 @@ extension SignInView{
 extension SignInView{
     var enterButton: some View{
         Button("Entrar"){
-            
+            viewModel.login(email: email, password: password)
         }
     }
 }
@@ -85,7 +104,7 @@ extension SignInView{
             
             ZStack{
                 NavigationLink(
-                    destination: Text("Tela de cadastro"),
+                    destination: viewModel.signUpView(),
                     tag: 1,
                     selection: $action,
                     label: { EmptyView() })
